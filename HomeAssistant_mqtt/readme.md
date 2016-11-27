@@ -6,9 +6,9 @@ Upgrading is done by stopping the containers, removing the container, pulling th
 
 ## Upgrade procedure
 
-docker-compose stop
-docker-compose rm
-docker-compose pull
-docker-compose start
+* docker-compose stop
+* docker-compose rm
+* docker-compose pull
+* docker-compose start
 
 ## Included the startup script.
