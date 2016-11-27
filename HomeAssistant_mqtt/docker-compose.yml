@@ -1,0 +1,17 @@
+mqtt:
+    image: toke/mosquitto:latest
+    ports:
+        - 1883:1883
+        - 9001:9001
+    volumes:
+    - ./config/mqtt:/mqtt/config
+    - ./log/mqtt:/mqtt/log
+    - ./data/mqtt:/mqtt/data/
+    
+home-assistant:
+    image: homeassistant/home-assistant:latest
+    ports:
+        - 8123:8123
+    volumes:
+        - ./config/home-assistant:/config
+        - /etc/localtime:/etc/localtime:ro
